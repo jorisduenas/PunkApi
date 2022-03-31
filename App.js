@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   ActivityIndicator
 } from 'react-native';
-import { getRandomBrewdog } from 'punkapi';
+import { getRandomBrewdog } from './punkapi';
 import Beer from './modele/beer.js';
 
 export default class App extends Component {
@@ -26,6 +26,7 @@ export default class App extends Component {
     let biere = new Beer(1, "biere", "bonne");
     getRandomBrewdog()
     .then((json) => {
+      json = json[0];
       try{
         let beer = new Beer(json.id, json.name, json.description, json.image_url);
         this.setState({
@@ -47,7 +48,7 @@ export default class App extends Component {
     if(isLoading){
       return(
         <View style={styles.container}>
-          <ActivityIndicator />
+          <ActivityIndicator size="large" color="#fff" />
         </View>
       )
     }

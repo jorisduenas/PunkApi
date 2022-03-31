@@ -5,7 +5,7 @@ import {
   View,
   Image,
 } from 'react-native';
-import Beer from '../modele/beer.js';
+import Beer from '../modele/beer';
 
 export default class BeerCard extends Component{
   constructor(props){

@@ -1,13 +1,7 @@
 {
   "expo": {
-    "name": "Putain de bière!",
-    "slug": "PuatainDeBiere",
-    "privacy": "public",
-    "sdkVersion": "32.0.0",
-    "platforms": [
-      "ios",
-      "android"
-    ],
+    "name": "PunkApi",
+    "slug": "PunkApi",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +19,14 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": "test"
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    }
   }
 }
